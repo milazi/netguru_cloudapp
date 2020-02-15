@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <nav>
+        <ul>
+        <% if(isAuthenticated){ %>
+            <li><a href="/user">Just dive in!</a></li>
+            <li><a href="/logout">Log Out</a></li>
+        <% } else { %>
+            <li><a href="/login">Log In</a></li>
+        <% } %>
+        </ul>
+    </nav>
