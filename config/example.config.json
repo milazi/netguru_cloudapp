@@ -1,0 +1,22 @@
+{
+    "environment": "development",
+    "databases": {
+        "mysql": {
+            "database": "myapp",
+            "hostname": "localhost",
+            "username": "root",
+            "password": "",
+            "port": 3306,
+            "dialect": "mysql"
+
+        },
+        "postgres": {
+            "database": "myapp",
+            "hostname": "localhost",
+            "username": "postgres",
+            "password": "",
+            "port": 5432,
+            "dialect": "postgres"
+        }
+    }
+}
