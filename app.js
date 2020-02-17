@@ -12,6 +12,9 @@ require("dotenv").config();
 var authRouter = require('./routes/auth');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var articlesRouter = require('./routes/articles');
+var authorsRouter = require('./routes/authors');
+var booksRouter = require('./routes/books');
 
 var app = express();
 
@@ -87,6 +90,9 @@ const secured = (req, res, next) => {
 app.use('/',authRouter);
 app.use('/', indexRouter);
 app.use('/user', secured, usersRouter);
+app.use('/article', secured, articlesRouter);
+app.use('/author', secured, authorsRouter);
+app.use('/book', secured, booksRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
